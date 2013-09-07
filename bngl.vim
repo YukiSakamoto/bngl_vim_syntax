@@ -5,8 +5,9 @@ let b:current_syntax = "bngl"
 syntax region bnglLineComment start=+#+ end=+$+
 highlight link bnglLineComment Comment
 
+" Section Declarations
 syntax match bnglDeclKeyword /\(begin\s\+\|end\s\+\)/ nextgroup=bnglSectName
-highlight link bnglDeclKeyword Keyword
+highlight link bnglDeclKeyword Define
 syntax match bnglSectName /\(model\|parameters\|observables\|seed\s\+speecies\|molecule\s\+types\|seed\s\+species\|reaction\s\+rules\)/ contained
 highlight link bnglSectName Define
 "syntax region bnglDeclSection start=+begin+ end=+$+
